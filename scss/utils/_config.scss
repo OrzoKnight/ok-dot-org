@@ -35,7 +35,10 @@ $breakpoints: (
 
 // $Fonts
 // ==========================================================================
-$main-font: "Catamaran", Helvetica, Arial, sans-serif;
+$noto-serif: 'Noto Serif', Georgia, serif;
+$catamaran: "Catamaran", Helvetica, Arial, sans-serif;
+$main-font: $catamaran;
+$secondary-font: $noto-serif;
 
 // $Easings
 // ==========================================================================

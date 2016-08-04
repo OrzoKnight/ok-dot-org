@@ -396,6 +396,8 @@ th {
   background-size: cover; }
 
 .main-welcome {
+  background: #333 url("../img/main-bg.jpg") top center no-repeat;
+  background-size: cover;
   background-color: #004358;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -414,24 +416,13 @@ th {
 main {
   height: 100%; }
 
-.full-size-section:nth-of-type(1) {
-  background-color: #1F8A70; }
-
-.full-size-section:nth-of-type(2) {
-  background-color: #BEDB39; }
-
-.full-size-section:nth-of-type(3) {
-  background-color: #FFE11A; }
-
-.full-size-section:nth-of-type(4) {
-  background-color: #FD7400; }
-
 .content {
   padding: 15px;
   height: 100%; }
 
 .col-wrap {
-  *zoom: 1; }
+  *zoom: 1;
+  width: 100%; }
   .col-wrap:before, .col-wrap:after {
     content: '';
     display: table; }
@@ -467,6 +458,37 @@ main {
       .one-third:last-child {
         margin-right: 0; }
       .one-third:last-child {
+        margin-right: 0; } }
+
+.two-thirds {
+  display: block;
+  clear: both;
+  float: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .two-thirds:first-child {
+    margin-left: auto; }
+  .two-thirds:last-child {
+    margin-right: auto; }
+  @media (min-width: 600px) {
+    .two-thirds {
+      text-align: left;
+      display: inline;
+      clear: none;
+      width: auto;
+      margin-left: 0;
+      margin-right: 0;
+      float: left;
+      clear: none;
+      width: 65.66667%;
+      margin-left: 0;
+      margin-right: 3%; }
+      .two-thirds:first-child {
+        margin-left: 0; }
+      .two-thirds:last-child {
+        margin-right: 0; }
+      .two-thirds:last-child {
         margin-right: 0; } }
 
 .one-half {
@@ -609,13 +631,6 @@ body {
   color: #262626;
   height: 100%; }
 
-h1.heading {
-  color: #fff;
-  font-size: 7rem;
-  font-size: 6vw;
-  text-align: left;
-  max-width: 80%; }
-
 /* ==========================================================================
    $Objects - Reusable elements (like buttons, form elements, etc)
    ========================================================================== */
@@ -627,6 +642,40 @@ h1.heading {
 /* ==========================================================================
    $Components - Sections (like header, footer, sidebar, ect)
    ========================================================================== */
+header {
+  color: #fff; }
+
+.before-heading, .after-heading {
+  margin: 0;
+  line-height: 0;
+  font-style: italic;
+  font-family: "Noto Serif", Georgia, serif; }
+
+.before-heading {
+  font-size: 3rem; }
+
+h1.heading {
+  font-size: 7rem;
+  font-size: 15vw;
+  text-align: center;
+  max-width: 80%;
+  margin: 40px;
+  line-height: 14vw; }
+  h1.heading span {
+    font-size: 6rem;
+    font-size: 13vw;
+    font-weight: normal; }
+    @media (min-width: 800px) {
+      h1.heading span {
+        font-size: 6vw; } }
+  @media (min-width: 800px) {
+    h1.heading {
+      font-size: 7vw;
+      line-height: 6vw; } }
+
+.after-heading {
+  font-size: 2rem; }
+
 .main-nav {
   position: fixed;
   bottom: 40px;
@@ -653,6 +702,27 @@ ul.nav {
     transition: all .2s ease-in-out; }
     ul.nav li a:hover {
       background-color: rgba(255, 255, 255, 0.8); }
+
+.section-full-bg {
+  background: transparent bottom center no-repeat;
+  background-size: cover; }
+
+.about-section-bg {
+  background: transparent url("../img/cat-right.jpg") top right no-repeat;
+  background-size: cover; }
+
+.about-section-two {
+  background-image: url("../img/about-us-bg-2.jpg"); }
+
+.hero-message {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 80px; }
+  .hero-message h2 {
+    font-size: 5vw;
+    line-height: 5vw; }
+  .hero-message p {
+    font-size: 1.2rem; }
 
 /* ==========================================================================
    $Overrides

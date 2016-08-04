@@ -1,1 +1,41 @@
+header { color: #fff; }
 
+%before-after {
+  margin: 0;
+  line-height: 0;
+  font-style: italic;
+  font-family: $secondary-font;
+}
+.before-heading {
+  @extend %before-after;
+  font-size: 3rem;
+}
+
+h1.heading {
+  font-size: 7rem;
+  font-size: 15vw;
+  text-align: center;
+  max-width: 80%;
+  margin: 40px;
+  line-height: 14vw;
+
+  & span {
+    font-size: 6rem;
+    font-size: 13vw;
+    font-weight: normal;
+
+    @include breakpoint(md) {
+      font-size: 6vw;
+    }
+  }
+
+  @include breakpoint(md) {
+    font-size: 7vw;
+    line-height: 6vw;
+  }
+}
+
+.after-heading {
+  @extend %before-after;
+  font-size: 2rem;
+}

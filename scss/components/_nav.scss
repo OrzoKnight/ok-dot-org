@@ -1,0 +1,33 @@
+.main-nav {
+  position: fixed;
+  bottom: 40px;
+  width: 100%;
+}
+
+ul.nav {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+  margin: 0 auto;
+
+  & li {
+    display: inline;
+    margin-right: 15px;
+  }
+
+  & li a {
+    background-color: rgba(#fff, .3);
+    border-radius: 4px;
+    color: #333;
+    padding: 7px 13px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .9rem;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      background-color: rgba(#fff, .8);
+    }
+  }
+}

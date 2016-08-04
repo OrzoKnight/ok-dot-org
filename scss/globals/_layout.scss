@@ -1,0 +1,93 @@
+// Containers
+.wrapper {
+  @include j-center(100%);
+  // @include j-center(1100px); Example. This centers the wrapper and gives it a width of 1100px
+  height: inherit;
+}
+
+%full-screen {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: inherit;
+  background-size: cover;
+}
+
+.main-welcome {
+  @extend %full-screen;
+  // background: #333 url('../img/main-bg.jpg') bottom center no-repeat;
+  background-color: #004358;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  height: 100%;
+}
+
+.full-size-section {
+  @extend %full-screen;
+}
+
+@for $i from 1 through length($section-colors) {
+  .full-size-section:nth-of-type(#{$i}) {
+    background-color: nth($section-colors, $i);
+  }
+}
+
+.content {
+  padding: 15px;
+  height: 100%;
+}
+
+// Grid
+.col-wrap {
+  @include j-cf();
+}
+
+.one-third {
+  @include j-stack();
+
+  @include breakpoint(sm) {
+    @include j-unstack();
+    @include j-column(1/3);
+  }
+}
+
+.one-half {
+  @include j-stack();
+
+  @include breakpoint(sm) {
+    @include j-unstack();
+      @include j-column(1/2);
+    }
+}
+
+.one-quarter {
+  @include j-stack();
+
+  @include breakpoint(sm) {
+    @include j-unstack();
+    @include j-column(1/4);
+  }
+}
+
+.two-quarters {
+  @include j-stack();
+
+  @include breakpoint(sm) {
+    @include j-unstack();
+    @include j-column(2/4);
+  }
+}
+
+.three-quarters {
+  @include j-stack();
+
+  @include breakpoint(sm) {
+    @include j-unstack();
+    @include j-column(3/4);
+  }
+}

@@ -1,0 +1,40 @@
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 10px;
+  color: #fff;
+  transition: all .2s ease-in-out;
+
+  &.dark-bg {
+    background-color: rgba($blue, .5);
+    color: $offblack;
+
+    & .branding-area {
+      opacity: 1;
+    }
+
+    & nav ul li a {
+      color: $offblack;
+    }
+  }
+}
+
+.branding-area {
+  color: $offblack;
+  width: 49%;
+  float: left;
+  font-weight: bold;
+  opacity: 0;
+
+  & span {
+    font-size: 1.1rem;
+
+    & em {
+      font-family: $secondary-font;
+      font-weight: normal;
+      font-size: .8rem;
+    }
+  }
+}

@@ -1,14 +1,23 @@
 .hero-message {
   max-width: 100%;
   margin: 0 auto;
-  padding: 80px;
-
-  & h2 {
-    font-size: 5vw;
-    line-height: 5vw;
-  }
+  padding: 60px;
 
   & p {
     font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  &.light-text {
+    color: #fff;
+  }
+}
+
+.hero-message.one-half {
+  padding: 20px;
+
+  @include breakpoint(md) {
+    @include j-column(1/2);
+    padding: 80px;
   }
 }

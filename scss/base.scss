@@ -46,10 +46,12 @@
 /* ==========================================================================
    $Components - Sections (like header, footer, sidebar, ect)
    ========================================================================== */
+@import "components/top-bar";
 @import "components/header";
 @import "components/nav";
 @import "components/backgrounds";
 @import "components/hero-message";
+@import "components/content-sections";
 
 /* ==========================================================================
    $Overrides

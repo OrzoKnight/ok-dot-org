@@ -18,6 +18,38 @@
 /* ==========================================================================
    $Global
    ========================================================================== */
+html {
+  font-size: 100%;
+  line-height: 1.8rem; }
+
+a {
+  color: #262626;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+  a:hover {
+    color: #019FBF; }
+
+p {
+  font-family: "Noto Serif", Georgia, serif; }
+
+h1, h2, h3 {
+  font-family: "Catamaran", Helvetica, Arial, sans-serif; }
+
+h2 {
+  font-size: 5vw;
+  line-height: 5vw;
+  margin-top: 0;
+  margin-bottom: 1.8rem; }
+
+p + h3 {
+  margin-top: 2.4rem; }
+
+.fine-print {
+  color: gray;
+  font-size: .75rem;
+  font-style: italic;
+  line-height: 1rem; }
+
 /* $Normalize
    ========================================================================== */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -388,7 +420,7 @@ th {
   padding-right: 0;
   height: inherit; }
 
-.main-welcome, .full-size-section {
+.main-welcome {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -415,6 +447,21 @@ th {
 
 main {
   height: 100%; }
+
+.home-content section {
+  *zoom: 1;
+  width: 100%;
+  height: 100%;
+  display: table;
+  padding-top: 40px; }
+  .home-content section:before, .home-content section:after {
+    content: '';
+    display: table; }
+  .home-content section:after {
+    clear: both; }
+
+.clean-content-section {
+  padding: 80px; }
 
 .content {
   padding: 15px;
@@ -642,6 +689,36 @@ body {
 /* ==========================================================================
    $Components - Sections (like header, footer, sidebar, ect)
    ========================================================================== */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 10px;
+  color: #fff;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+  .top-bar.dark-bg {
+    background-color: rgba(1, 159, 191, 0.5);
+    color: #262626; }
+    .top-bar.dark-bg .branding-area {
+      opacity: 1; }
+    .top-bar.dark-bg nav ul li a {
+      color: #262626; }
+
+.branding-area {
+  color: #262626;
+  width: 49%;
+  float: left;
+  font-weight: bold;
+  opacity: 0; }
+  .branding-area span {
+    font-size: 1.1rem; }
+    .branding-area span em {
+      font-family: "Noto Serif", Georgia, serif;
+      font-weight: normal;
+      font-size: .8rem; }
+
 header {
   color: #fff; }
 
@@ -677,31 +754,27 @@ h1.heading {
   font-size: 2rem; }
 
 .main-nav {
-  position: fixed;
-  bottom: 40px;
-  width: 100%; }
+  width: 50%;
+  float: right; }
 
 ul.nav {
   list-style-type: none;
   padding-left: 0;
-  text-align: center;
+  text-align: right;
   margin: 0 auto; }
   ul.nav li {
-    display: inline;
-    margin-right: 15px; }
+    display: inline; }
+    ul.nav li:last-child {
+      border: none; }
   ul.nav li a {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    color: #333;
-    padding: 7px 13px;
+    color: #fff;
+    padding: 7px 17px;
     text-decoration: none;
-    font-weight: bold;
     font-size: .9rem;
-    text-transform: uppercase;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out; }
     ul.nav li a:hover {
-      background-color: rgba(255, 255, 255, 0.8); }
+      text-decoration: underline; }
 
 .section-full-bg {
   background: transparent bottom center no-repeat;
@@ -711,18 +784,36 @@ ul.nav {
   background: transparent url("../img/cat-right.jpg") top right no-repeat;
   background-size: cover; }
 
-.about-section-two {
-  background-image: url("../img/about-us-bg-2.jpg"); }
+.get-involved-section-bg {
+  background: transparent url("../img/bird-right.jpg") top center no-repeat;
+  background-size: cover; }
 
 .hero-message {
   max-width: 100%;
   margin: 0 auto;
-  padding: 80px; }
-  .hero-message h2 {
-    font-size: 5vw;
-    line-height: 5vw; }
+  padding: 60px; }
   .hero-message p {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    line-height: 2rem; }
+  .hero-message.light-text {
+    color: #fff; }
+
+.hero-message.one-half {
+  padding: 20px; }
+  @media (min-width: 800px) {
+    .hero-message.one-half {
+      float: left;
+      clear: none;
+      width: 48.5%;
+      margin-left: 0;
+      margin-right: 3%;
+      padding: 80px; }
+      .hero-message.one-half:last-child {
+        margin-right: 0; } }
+
+.text-area {
+  padding: 60px;
+  font-family: "Noto Serif", Georgia, serif; }
 
 /* ==========================================================================
    $Overrides

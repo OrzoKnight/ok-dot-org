@@ -788,6 +788,10 @@ ul.nav {
   background: transparent url("../img/bird-right.jpg") top center no-repeat;
   background-size: cover; }
 
+.pledge-section-bg {
+  background: transparent url("../img/pledge-bg.jpg") top center no-repeat;
+  background-size: cover; }
+
 .hero-message {
   max-width: 100%;
   margin: 0 auto;
@@ -795,8 +799,6 @@ ul.nav {
   .hero-message p {
     font-size: 1.2rem;
     line-height: 2rem; }
-  .hero-message.light-text {
-    color: #fff; }
 
 .hero-message.one-half {
   padding: 20px; }
@@ -810,6 +812,26 @@ ul.nav {
       padding: 80px; }
       .hero-message.one-half:last-child {
         margin-right: 0; } }
+
+.hero-centered {
+  width: auto;
+  max-width: 60%;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding: 60px; }
+  .hero-centered h2 {
+    text-align: center; }
+
+.light-text {
+  color: #fff; }
+
+.pledge {
+  font-size: 1.2rem;
+  line-height: 2rem; }
 
 .text-area {
   padding: 60px;

@@ -1,0 +1,35 @@
+.img-gallery {
+  margin-top: 20px;
+}
+
+.gallery-item {
+  width: 80%;
+  position: relative;
+  margin-top: 20px;
+
+  & img {
+    display: block;
+    max-width: 100%;
+  }
+
+  & .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(black, .7);
+    color: #fff;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: .9rem;
+    width: 100%;
+  }
+}
+
+.mini-gallery {
+
+  & img {
+    max-width: 90%;
+    margin: 0;
+    display: block;
+  }
+}

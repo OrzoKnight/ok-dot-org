@@ -1,4 +1,12 @@
 .text-area {
   padding: 60px;
   font-family: $secondary-font;
+
+  &.area-small {
+    padding: 20px;
+  }
+}
+
+.large-section-wrap {
+  margin-top: 40px;
 }

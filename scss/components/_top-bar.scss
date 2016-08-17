@@ -1,5 +1,5 @@
 .top-bar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -7,9 +7,13 @@
   color: #fff;
   transition: all .2s ease-in-out;
 
-  &.dark-bg {
-    background-color: rgba($blue, .5);
+  &.full-bar {
+    //background-color: rgba($blue, .5);
     color: $offblack;
+
+    &.dark-bg {
+      background-color: rgba(white, .4);
+    }
 
     & .branding-area {
       opacity: 1;

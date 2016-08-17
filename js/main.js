@@ -21,15 +21,15 @@
     });
   });
 
-  $(document).on("scroll", function(){
-    if
-      ($(document).scrollTop() > 500){
-      $(".top-bar").addClass("dark-bg");
-    }
-    else
-    {
-      $(".top-bar").removeClass("dark-bg");
-    }
-  });
+  // $(document).on("scroll", function(){
+  //   if
+  //     ($(document).scrollTop() > 500){
+  //     $(".top-bar").addClass("dark-bg");
+  //   }
+  //   else
+  //   {
+  //     $(".top-bar").removeClass("dark-bg");
+  //   }
+  // });
 
 }));
